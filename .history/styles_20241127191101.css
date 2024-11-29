@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+body{
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(45deg, #c66aff, #ff5b5b);
+}
+.container{
+    width: 100%;
+    height: calc(100vh - 60px);
+}
+.pages{
+    display: flex;
+    width: 500%;
+    height: 100%;
+    transition: transform 0.7s ease;
+}
+.page {
+    width: 95vw;
+    height: 95%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+    transition: all 0.7s;
+    border: 3px red solid;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.61);
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.723);
+    color: white;
+    padding: 2vw;
+}
+nav{
+    border: 3px red solid;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 150px;
+    background-color: rgba(70, 70, 76, 0.4);
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    list-style: none;
+}
+a,a:visited{
+    text-decoration: none;
+    color: black;
+}
+.Main{
+    display: flex;
+    flex-direction: row;
+}
+.pic{
+    border: 2px blue solid;
+    flex: 0 0 450px;
+
+}
+.pic img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.content{
+    flex: 1;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.title{
+    font-size: 4rem;
+    color: #ffb300;
+    font-family: system-ui, sans-serif;
+}
+p{
+    font-size: 2rem;
+    line-height: 1.6;
+    font-family: system-ui, sans-serif;
+}
+.next{
+    background: #4ecdc4;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    align-self: flex-end;
+}
+.prev{
+    background: #4ecdc4;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    align-self: flex-start;
+}

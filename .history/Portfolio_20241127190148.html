@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#" id="nav-main">Main</a></li>
+            <li><a href="#" id="nav-about">About me</a></li>
+            <li><a href="#" id="nav-projects">Projects</a></li>
+            <li><a href="#" id="nav-associations">Associations</a></li>
+            <li><a href="#" id="nav-this">This <P></P>roject</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        <div class="pages">
+            <div class="page Main">
+                <div class="pic"><img src="peby6afclo6c1.jpeg" alt="'me'"></div>
+                <div class="content">
+                    <h1 class="title">Welcome My Portfolio</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae facilis cum, recusandae magnam doloribus qui sequi aut ab dicta reprehenderit vel ipsum consectetur rem aliquid culpa quod, fugit consequuntur animi!</p>
+                    <button onClick="slide(1)" class="next">More About Me</button>
+                </div>
+                
+            </div>
+            <div class="page About">
+                About me
+                <button onClick="slide(0)" class="prev">Main</button>
+                <button onClick="slide(2)" class="next">Projects</button>
+            </div>
+            <div class="page Proj">
+                Projects
+                <button onClick="slide(1)" class="prev">About me</button>
+                <button onClick="slide(3)" class="next">Associations</button>
+            </div>
+            <div class="page Ass">
+                Associations
+                <button onClick="slide(2)" class="prev">Projects</button>
+                <button onClick="slide(3)" class="next">about this project</button>
+            </div>
+            <div class="page this">
+                about this Project
+                <button onClick="slide(2)" class="prev">Projects</button>
+            </div>
+        </div>
+    </div>
+<script src="scripts.js"></script>
+</body>
+</html>
