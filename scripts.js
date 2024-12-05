@@ -16,6 +16,7 @@ document.getElementById("nav-main").addEventListener("click", () => slide(0));
 document.getElementById("nav-about").addEventListener("click", () => slide(1));
 document.getElementById("nav-projects").addEventListener("click", () => slide(2));
 document.getElementById("nav-this").addEventListener("click", () => slide(3));
+document.getElementById("nav-cont").addEventListener("click", () => slide(4));
 
 activateTab = (index) => {
     tabs.forEach((tab, idx) => {
