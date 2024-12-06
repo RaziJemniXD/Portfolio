@@ -1,3 +1,9 @@
+input:-webkit-autofill, textarea:-webkit-autofill {
+    background-color: transparent !important;
+    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+    -webkit-text-fill-color: inherit !important;
+    border-color: inherit !important;
+}
 .cont{
     font-family: system-ui, sans-serif;
     overflow: auto;
@@ -23,6 +29,7 @@
     padding-left: 2rem;
     padding-right: 2rem;
     justify-content: center;
+    gap: 3vh;
 }
 .info{
     padding-left: 2rem;
@@ -33,9 +40,10 @@
     position: relative;
     margin-bottom: 3vh;
 }
-.in-grp input,textarea {
+.in-grp input,.in-grp textarea{
+    box-sizing: border-box;
+    margin-top: 2vh;
     padding: 0.5rem;
-    margin-bottom: 1rem;
     font-size: calc(1rem + 0.8vw);
     border: none;
     border-bottom: 2px solid #000;
@@ -44,12 +52,33 @@
     resize: none;
     flex: 1 1;
     color: white;
-    width: 70%;
+    width: 100%;
 }
-.frm label {
+.in-grp textarea {
+    line-height: 1.5; /* Adjust line height for better spacing */
+    height: calc(7vh + 0.8vw); /* Set default height matching input */
+}
+.in-grp input:focus,textarea:focus{
+    border-color: #c66aff;
+    
+}
+.in-grp label {
+    position: absolute;
+    left: 0.5vw;
+    top: 3vh;
     font-size: calc(1rem + 0.5vw);
     color: rgb(139, 136, 136);
     flex: 1 1;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    pointer-events: none;
+}
+.in-grp input:focus + label,
+.in-grp textarea:focus + label,
+.in-grp input:not(:placeholder-shown) + label,
+.in-grp textarea:not(:placeholder-shown) + label {
+    top: -1.5vh;
+    font-size: calc(0.8rem + 0.4vw);
+    color: #ff5b5b;
 }
 .submit{
     border: #c66aff solid 3px;
@@ -65,6 +94,18 @@
     align-self: center;
     flex: 0 1;
 }
+.submit:hover{
+    border: none;
+    background-color: #ff5b5b;
+    transform:translate(0,-5px);
+    box-shadow: 0px 10px 10px 7px rgba(0, 0, 0, 0.295);
+}
+.submit.sent {
+    background-color: #28a745;
+    border-color: #28a745;
+    color: white;
+    cursor: default;
+}
 .info h2{
     color: #c66aff;
     font-size: calc(1.5rem + 1vw);
@@ -74,4 +115,32 @@
     font-size: calc(1rem + 0.8vw);
     padding-left: 1rem;
     letter-spacing: 2px;
+}
+.icon-hub {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 5vh;
+}
+.icon {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    gap: 0.5rem;
+    transition: transform 0.2s ease-in-out;
+}
+.icon img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(79%) sepia(64%) saturate(7069%) hue-rotate(237deg) brightness(102%) contrast(106%);
+}
+.icon:hover {
+    transform: scale(1.1);
+    color: #ff5b5b;
+    filter: brightness(0) saturate(100%) invert(76%) sepia(76%) saturate(6990%) hue-rotate(332deg) brightness(110%) contrast(90%);
+}
+.icon-hub span{
+    font-size: calc(1rem + 0.5vw);
 }
