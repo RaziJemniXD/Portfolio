@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="CSS/general.css">
     <title>Portfolio</title>
 </head>
 <body>
@@ -12,7 +12,6 @@
             <li class="tab"><a href="#" id="nav-main">Main</a></li>
             <li class="tab"><a href="#" id="nav-about">About me</a></li>
             <li class="tab"><a href="#" id="nav-projects">Projects</a></li>
-            <li class="tab"><a href="#" id="nav-this">This Project</a></li>
             <li class="tab"><a href="#" id="nav-cont">Contact Me</a></li>
         </ul>
     </nav>
@@ -90,60 +89,48 @@
                 </div>
                 <div class="buttons">
                     <button onClick="slide(1)" class="prev">About me</button>
-                    <button onClick="slide(3)" class="next">About This Project</button>
+                    <button onClick="slide(3)" class="next">Contact Me</button>
                 </div>
-            </div>
-            <div class="page this">
-                <div class="part">
-                    <h2 class="title">Why This Portfolio?</h2>
-                    <p>This project was created as the final exam for an MTC bootcamp to earn my certification. However, the main reason I joined this bootcamp was to learn and improve my skills by working on projects. This portfolio marks the beginning of my journey, and I hope to continue learning and growing by taking on more individual projects in the future.</p>
-                </div>
-                <div class="part">
-                    <h2 class="title">Things I Learned:</h2>
-                    <ul>
-                        <li>Using divs and managing sections effectively</li>
-                        <li>Styling pages and making components scalable with window resizing</li>
-                        <li>Leveraging JavaScript for simple but cool effects like sliding pages</li>
-                    </ul>
-                </div>
-                <div class="part">
-                    <h2 class="title">Next Step:</h2>
-                    <p>My next goal is to continue learning web development, with a particular focus on React.js, as I believe it’s one of the most widely used and powerful frameworks for building modern web applications.</p>
-                </div>
-                <button onClick="slide(2)" class="prev">Projects</button>
             </div>
             <div class="page cont">
-                <div>
-                    <form class="msgf">
-                        <label for="name">Your Name:</label>
-                        <input type="text" name="name" id="name"><br>
-                        <label for="email">Your Email:</label>
-                        <input type="email" name="email" id="email"><br>
-                        <label for="msg">Your Message:</label>
-                        <textarea name="msg" id="msg"></textarea><br>
+                <div class="cont-layout">
+                    <form class="frm">
+                        <div class="in-grp">
+                            <label for="name">Your Name:</label>
+                            <input type="text" name="name" id="name">
+                        </div>
+                        <div class="in-grp">
+                            <label for="email">Your Email:</label>
+                            <input type="email" name="email" id="email">
+                        </div>
+                        <div class="in-grp">
+                            <label for="msg">Your Message:</label>
+                            <textarea name="msg" id="msg"></textarea>
+                        </div>
                         <button type="submit" class="submit">Send Message</button>
                     </form>
-                </div>
-                <div class="info">
-                    <div class="mail">
-                        <h2>Contact Mail:</h2>
-                        <span class="mmail">razijemni264@gmail.com</span>
+                    <div class="info">
+                        <div class="mail">
+                            <h2>Contact Mail:</h2>
+                            <span class="add">razijemni264@gmail.com</span>
+                        </div>
+                        <div class="icon-hub">
+                            <div class="icon">
+                                <span>LinkedIn</span>
+                            </div>
+                            <div class="icon">
+                                <span>Instagram</span>
+                            </div>
+                            <div class="icon">
+                                <span>Facebook</span>
+                            </div>
+                            <div class="icon">
+                                <span>X</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="iconh">
-                        <div class="icon">
-                            <span>LinkedIn</span>
-                        </div>
-                        <div class="icon">
-                            <span>Instagram</span>
-                        </div>
-                        <div class="icon">
-                            <span>Facebook</span>
-                        </div>
-                        <div class="icon">
-                            <span>X</span>
-                        </div>
-                    </div>
                 </div>
+                <button onClick="slide(2)" class="prev">Projects</button>
             </div>
         </div>
     </div>

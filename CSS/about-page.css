@@ -1,0 +1,35 @@
+.about{
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.bullets h2, .me h2 , .goal h2{
+    color: #c66aff;
+}
+.me, .goal, .bullets{
+    width: 100%;
+    font-size: calc(1rem + 0.8vw);
+    font-family: system-ui, sans-serif;
+}
+.bullets{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+.bullets ul, .goal ul{
+    padding-left: 3vw;
+}
+.goal ul{
+    list-style-type: square;
+}
+.me p{
+    padding-left: 2vw;
+}
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}

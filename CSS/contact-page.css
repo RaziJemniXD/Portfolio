@@ -1,0 +1,77 @@
+.cont{
+    font-family: system-ui, sans-serif;
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.cont-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    flex: 1 1;
+}
+.frm , .info{
+    display: flex;
+    flex: 1 1;
+    flex-direction: column;
+    height: 100%;
+}
+.frm{
+    padding-left: 2rem;
+    padding-right: 2rem;
+    justify-content: center;
+}
+.info{
+    padding-left: 2rem;
+    max-width: 40%;
+    justify-content: space-around;
+}
+.in-grp{
+    position: relative;
+    margin-bottom: 3vh;
+}
+.in-grp input,textarea {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: calc(1rem + 0.8vw);
+    border: none;
+    border-bottom: 2px solid #000;
+    background: transparent;
+    outline: none;
+    resize: none;
+    flex: 1 1;
+    color: white;
+    width: 70%;
+}
+.frm label {
+    font-size: calc(1rem + 0.5vw);
+    color: rgb(139, 136, 136);
+    flex: 1 1;
+}
+.submit{
+    border: #c66aff solid 3px;
+    background: transparent;
+    font-family: system-ui, sans-serif;
+    padding: 0.8rem;
+    color: white;
+    font-size: clamp(1rem, calc(2rem + 1vw), 1.4rem);
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 200px;
+    height: 60px;
+    align-self: center;
+    flex: 0 1;
+}
+.info h2{
+    color: #c66aff;
+    font-size: calc(1.5rem + 1vw);
+    margin-bottom: 1vh;
+}
+.add{
+    font-size: calc(1rem + 0.8vw);
+    padding-left: 1rem;
+    letter-spacing: 2px;
+}

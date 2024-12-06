@@ -1,0 +1,107 @@
+@import url(nav-bar.css);
+@import url(main-page.css);
+@import url(about-page.css);
+@import url(projects-page.css);
+@import url(contact-page.css);
+
+::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+    margin-right: 2px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #88888831;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #5a5959a6;
+}
+::-webkit-scrollbar-thumb:active {
+    background: #313030be;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    padding-top: 1vh;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(45deg, #c66aff, #ff5b5b);
+}
+.container{
+    width: 100%;
+    height: calc(100vh - 60px);
+    overflow: hidden;
+}
+.pages{
+    display: flex;
+    width: 405;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-right: 2.5vw;
+    padding-left: 2.5vw;
+    gap: 5vw;
+}
+.page {
+    width: 95vw;
+    height: 95%;
+    gap: 2vw;
+    transition: all 0.7s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.61);
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.723);
+    color: white;
+    padding: 2vw;
+    flex-shrink: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.next,.prev{
+    border: #c66aff solid 3px;
+    background: transparent;
+    font-family: system-ui, sans-serif;
+    color: white;
+    padding: 1rem 1rem;
+    font-size: clamp(1rem, calc(2rem + 1vw), 1.4rem);
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 200px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 0;
+}
+.next{
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    align-self: flex-end;
+}
+.prev{
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    align-self: flex-start;
+}
+.next:hover{
+    border: none;
+    background-color: #ff5b5b;
+    transform:translate(5px, -5px);
+    box-shadow: -5px 10px 10px rgba(0, 0, 0, 0.295);
+}
+.prev:hover{
+    border: none;
+    background-color: #ff5b5b;
+    transform:translate(-5px, -5px);
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.295);
+}

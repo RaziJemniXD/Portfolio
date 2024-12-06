@@ -1,0 +1,28 @@
+.Proj {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20vw, 1fr));
+    gap: 1rem;
+    width: 100%;
+    margin-bottom: 2rem;
+}
+.project-item {
+    background-color: #333333a1;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    padding: 10px;
+    text-align: center;
+}
+.project-item img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.project-item:hover{
+    transform: scale(1.05);
+}
